@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCZxHpsxZoL8hACQnt6nrlWwLKzcF2cdT0",
-  authDomain: "react-geolocation-project-01.firebaseapp.com",
-  projectId: "react-geolocation-project-01",
-  storageBucket: "react-geolocation-project-01.appspot.com",
-  messagingSenderId: "156511131324",
-  appId: "1:156511131324:web:8c20128c04e0b80e9f22b9",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+  appId: process.env.REACT_APP_MESSAGING_APP_ID,
 };
 
 // Initialize Firebase
