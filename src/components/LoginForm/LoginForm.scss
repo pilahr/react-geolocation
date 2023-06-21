@@ -25,6 +25,10 @@
     font-size: 18px;
   }
 
+  &__error-msg {
+    color: $text-white;
+  }
+
   &__button {
     background-color: $color-blue;
     border-radius: 5px;
