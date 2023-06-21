@@ -7,7 +7,7 @@ import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
@@ -16,7 +16,7 @@ const Login = () => {
   const getUser = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        SpeechSynthesisUtterance(userCredential.user);
+        setUser(userCredential.user);
         navigate("/weather");
       })
       .catch((error) => {
@@ -49,16 +49,19 @@ const Login = () => {
           hideError={hideError}
           getUser={getUser}
         />
-            <div>
-        {errorMessage && (
-          <div className="login__popUp-msg">
-            <h1 className="login__popUp-msg--text">Please Enter a valid email and password!</h1>
-            <button className="login__popUp-msg--button"onClick={hideError}>Try again</button>
-          </div>
-        )}
+        <div>
+          {errorMessage && (
+            <div className="login__popUp-msg">
+              <h1 className="login__popUp-msg--text">
+                Please Enter a valid email and password!
+              </h1>
+              <button className="login__popUp-msg--button" onClick={hideError}>
+                Try again
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-      </div>
-  
     </div>
   );
 };
