@@ -9,7 +9,9 @@ const Weather = () => {
         <Header />
       </div>
       <div>
-        <h1>Secret Number is this number: {process.env.REACT_APP_SECRET_KEY}</h1>
+        <h1>
+          Secret Number is this number: `${process.env.REACT_APP_SECRET_KEY}`
+        </h1>
       </div>
     </div>
   );
