@@ -14,7 +14,6 @@
   }
 
   &__popUp-msg {
-
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -68,6 +67,14 @@
 
     &__form {
       margin: 0 100px;
+    }
+
+    &__popUp-msg {
+      top: 30%;
+      max-width: 400px;
+      height: 200px;
+      margin: 70px;
+      padding: 30px;
     }
   }
 }

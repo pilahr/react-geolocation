@@ -49,8 +49,7 @@ const Login = () => {
           hideError={hideError}
           getUser={getUser}
         />
-      </div>
-      <div>
+            <div>
         {errorMessage && (
           <div className="login__popUp-msg">
             <h1 className="login__popUp-msg--text">Please Enter a valid email and password!</h1>
@@ -58,6 +57,8 @@ const Login = () => {
           </div>
         )}
       </div>
+      </div>
+  
     </div>
   );
 };
