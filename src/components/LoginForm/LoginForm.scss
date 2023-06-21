@@ -1,0 +1,51 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-dark-gray;
+  opacity: 0.8;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px $color-black;
+
+  &__heading {
+    color: $text-white;
+  }
+
+  &__input {
+    margin: 10px 0px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  &__button {
+    background-color: $color-blue;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0px;
+    text-align: center;
+
+    &--login {
+      background-color: $color-blue;
+      color: $color-white;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .login-form {
+    width: 500px;
+  }
+}
