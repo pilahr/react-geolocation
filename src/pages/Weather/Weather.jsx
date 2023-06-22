@@ -2,7 +2,6 @@ import React from "react";
 import "./Weather.scss";
 import Header from "../../components/Header/Header";
 
-
 const Weather = () => {
   return (
     <div className="weather">
@@ -10,7 +9,7 @@ const Weather = () => {
         <Header />
       </div>
       <div>
-        <h1>Secret Number is this number: {process.env.REACT_APP_SECRET_KEY}</h1>
+        <h1>Hello this is weather page</h1>
       </div>
     </div>
   );
