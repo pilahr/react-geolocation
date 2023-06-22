@@ -30,15 +30,15 @@ const App = () => {
   //   console.log("Unable to retrieve your location");
   // };
 
+
+
   const getWeatherData = async (city) => {
     const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
 
     try {
-      let url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}`;
+      let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
 
-      const response = await fetch(
-        url + `&q=${city[0].toUpperCase() + city.slice(1)}&days=7&aqi=yes`
-      );
+      const response = await fetch(url + `&q=${city}&days=7&aqi=yes`);
 
       if (!response.ok) {
         throw new Error("Sorry something went wrong!");
@@ -47,7 +47,6 @@ const App = () => {
       const data = await response.json();
       setWeatherData(data);
       setCity(city);
-      
     } catch (e) {
       alert(e.message);
     }
