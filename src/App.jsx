@@ -7,7 +7,7 @@ import Weather from "./pages/Weather/Weather";
 const App = () => {
   const [user, setUser] = useState();
   const [weatherData, setWeatherData] = useState({});
-  const [city, setCity] = useState("bangkok");
+  const [city, setCity] = useState("china");
   // const [location, setLocation] = useState(null);
 
   // const geolocationAPI = navigator.geolocation;
@@ -34,10 +34,11 @@ const App = () => {
     const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
 
     try {
-      let url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}`;
+      let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
 
       const response = await fetch(
-        url + `&q=${city[0].toUpperCase() + city.slice(1)}&days=7&aqi=yes`
+        url +
+          `&q=${city[0].toUpperCase() + city.slice(1)}&days=7&aqi=yes&alerts=no`
       );
 
       if (!response.ok) {
@@ -47,17 +48,22 @@ const App = () => {
       const data = await response.json();
       setWeatherData(data);
       setCity(city);
-      
     } catch (e) {
       alert(e.message);
     }
   };
 
+  // useEffect(() => {
+  //   getUserLocation();
+  // }, []);
+
+  // console.log("location is : ", location);
+
   useEffect(() => {
     getWeatherData(city);
   }, [city]);
 
-  console.log(weatherData);
+  console.log("weather data is: ", weatherData);
 
   return (
     <>
