@@ -7,8 +7,7 @@ import Weather from "./pages/Weather/Weather";
 const App = () => {
   const [user, setUser] = useState();
   const [weatherData, setWeatherData] = useState({});
-  const [city, setCity] = useState("china");
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState("bangkok");
 
   const geolocationAPI = navigator.geolocation;
 
@@ -22,25 +21,23 @@ const App = () => {
   const success = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    setLocation({ latitude, longitude });
-    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-    console.log("position", position);
+    setLocation(`${latitude},${longitude}`);
+    console.log(latitude, longitude);
   };
 
   const error = () => {
-    console.log("Unable to retrieve your location");
+    alert("Unable to retrieve your location");
   };
 
-  const getWeatherData = async (city) => {
+  const getWeatherData = async (location) => {
     const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
 
     try {
       let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
 
-      const response = await fetch(
-        url +
-          `&q=${city[0].toUpperCase() + city.slice(1)}&days=7&aqi=yes&alerts=no`
-      );
+      url += `&q=${location}&days=7&aqi=yes&alerts=no`;
+
+      const response = await fetch(url);
 
       if (!response.ok) {
         throw new Error("Sorry something went wrong!");
@@ -48,15 +45,14 @@ const App = () => {
 
       const data = await response.json();
       setWeatherData(data);
-      setCity(city);
     } catch (e) {
       alert(e.message);
     }
   };
 
   useEffect(() => {
-    getWeatherData(city);
-  }, [city]);
+    getWeatherData(location);
+  }, [location]);
 
   console.log("weather data is: ", weatherData);
 
@@ -71,12 +67,7 @@ const App = () => {
           <Routes>
             <Route
               path="/weather"
-              element={
-                <Weather
-                  location={location}
-                  getUserLocation={getUserLocation}
-                />
-              }
+              element={<Weather getUserLocation={getUserLocation} />}
             />
           </Routes>
         )}
