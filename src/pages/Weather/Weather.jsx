@@ -2,7 +2,7 @@ import React from "react";
 import "./Weather.scss";
 import Header from "../../components/Header/Header";
 
-const Weather = ({ location, getUserLocation }) => {
+const Weather = ({ getUserLocation }) => {
   return (
     <div className="weather">
       <div>
