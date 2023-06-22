@@ -11,7 +11,7 @@ const Weather = () => {
       <div>
         <h1>Hello this is weather page</h1>
         <p>Our secret key is {process.env.REACT_APP_SECRET_KEY}</p>
-        console.log({process.env.REACT_APP_SECRET_KEY});
+        console.log(process.env.REACT_APP_SECRET_KEY);
       </div>
     </div>
   );
