@@ -9,6 +9,27 @@ const App = () => {
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState("london");
 
+  const geolocationAPI = navigator.geolocation;
+
+  const getUserLocation = () => {
+    if (!geolocationAPI) {
+      console.log("Geolocation API is not available in your browser!");
+    } else {
+      geolocationAPI.getCurrentPosition(success, error);
+    }
+  };
+  const success = (location) => {
+    const latitude = location.coords.latitude;
+    const longitude = location.coords.longitude;
+    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+  };
+
+  const error = () => {
+    console.log("Unable to retrieve your location");
+  };
+
+  
+
   const getWeatherData = async (city) => {
     const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
 
@@ -34,7 +55,7 @@ const App = () => {
     getWeatherData(city);
   }, [city]);
 
-  console.log(weatherData);
+  // console.log(weatherData);
   return (
     <>
       <Router>
