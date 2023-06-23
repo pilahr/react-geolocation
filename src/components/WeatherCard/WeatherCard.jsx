@@ -30,15 +30,15 @@ const WeatherCard = ({ weatherData }) => {
         <div className={background}>
           <div className="weatherCard__info">
             <div>
-              <h3 className="weatherCard__info--text">
+              <h1 className="weatherCard__info--text">
                 {weatherData.current.temp_c} °C
-              </h3>
+              </h1>
             </div>
 
             <div>
-              <p className="weatherCard__info--text">
+              <h2 className="weatherCard__info--text">
                 {weatherData.current.condition.text}
-              </p>
+              </h2>
             </div>
 
             <div className="weatherCard__info--wrap-location">
