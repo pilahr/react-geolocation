@@ -1,5 +1,6 @@
 import React from "react";
 import "./WeatherCard.scss";
+import location from "../../assets/location.png";
 
 const WeatherCard = ({ weatherData }) => {
   let background = "weatherCard";
@@ -40,12 +41,13 @@ const WeatherCard = ({ weatherData }) => {
               </p>
             </div>
 
-            <div>
+            <div className="weatherCard__info--wrap-location">
+              <img className="weatherCard__info--location-icon" src={location} alt="location pin" />
               <h4 className="weatherCard__info--text-city">
                 {weatherData.location.name}, {weatherData.location.country}
               </h4>
-              <h6 className="weatherCard__info--text-temp">20 - 30 °C</h6>
             </div>
+            <h6 className="weatherCard__info--text-temp">20 - 30 °C</h6>
           </div>
 
           <div>
