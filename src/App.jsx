@@ -22,7 +22,6 @@ const App = () => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     setLocation(`${latitude},${longitude}`);
-    console.log(latitude, longitude);
   };
 
   const error = () => {
@@ -65,7 +64,13 @@ const App = () => {
           <Routes>
             <Route
               path="/weather"
-              element={<Weather getUserLocation={getUserLocation} weatherData={weatherData}/>}
+              element={
+                <Weather
+                  getUserLocation={getUserLocation}
+                  weatherData={weatherData}
+                  setLocation={setLocation}
+                />
+              }
             />
           </Routes>
         )}

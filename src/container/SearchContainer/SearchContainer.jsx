@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import Searchbox from "../../components/Searchbox/Searchbox";
 import "./SearchContainer.scss";
-import Weather from "../../pages/Weather/Weather";
-import WeatherContainer from "../WeatherContainer/WeatherContainer";
 
-const SearchContainer = ({ weatherData }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSearchInput = (event) => {
-    event.preventDefault();
-    setSearchTerm(event.target.value);
-  };
+const SearchContainer = ({ searchTerm, handleSearchInput }) => {
 
   // let searchedResult = (
   //   <h5 className="search-container__notFound">No Cities Found</h5>
