@@ -9,12 +9,12 @@ const Weather = ({ getUserLocation, weatherData }) => {
       <div>
         <Header />
       </div>
-      <div>
-        <SearchContainer weatherData={weatherData}/>
+      <div className="weather__wrap">
+        <div>
+          <SearchContainer weatherData={weatherData} />
+        </div>
+        <button onClick={getUserLocation}>Get my location</button>
       </div>
-      <h2>hello</h2>
-
-      <button onClick={getUserLocation}>Get my location</button>
     </div>
   );
 };

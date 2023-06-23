@@ -2,10 +2,9 @@
 @use "../../styles/variables" as *;
 
 .search-container {
-  display: flex;
-  justify-content: center;
-
   &__notFound {
-    margin: 100px;
+    color: white;
+    text-align: center;
+    padding: 5px;
   }
 }
