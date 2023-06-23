@@ -5,12 +5,19 @@
   margin: 20px;
   padding: 15px;
   display: flex;
+  justify-content: space-between;
   height: 300px;
   width: 300px;
   background-color: $color-gray;
   opacity: 0.7;
   border: none;
   border-radius: 10px;
+
+  &__greeting {
+    text-align: center;
+    font-size: 2rem;
+    color: $text-white;
+  }
 
   &__info {
     &--text {
@@ -45,18 +52,20 @@
 .afternoon {
   background: url("https://i0.wp.com/sociallover.net/wp-content/uploads/2020/12/good-afternon-image.png?fit=640%2C360&ssl=1");
   background-size: 300px 300px;
+  background-repeat: no-repeat;
 }
 
 .evening {
   background: url("https://www.wishesmsg.com/wp-content/uploads/Good-Evening-Message.jpg");
   background-size: 300px 300px;
+  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
-    .weatherCard {
-        width: 500px;
-        height: 300px;
-    }
+  .weatherCard {
+    width: 500px;
+    height: 300px;
+  }
   .morning {
     background-size: 500px 300px;
   }
@@ -67,5 +76,34 @@
 
   .evening {
     background-size: 500px 300px;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .weatherCard {
+    width: 800px;
+    height: 400px;
+
+    &__info {
+      &--text-city {
+        margin-top: 80px;
+      }
+
+      &--icon {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  .morning {
+    background-size: 800px 400px;
+  }
+
+  .afternoon {
+    background-size: 800px 400px;
+  }
+
+  .evening {
+    background-size: 800px 400px;
   }
 }

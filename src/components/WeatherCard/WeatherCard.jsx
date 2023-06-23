@@ -3,23 +3,28 @@ import "./WeatherCard.scss";
 
 const WeatherCard = ({ weatherData }) => {
   let background = "weatherCard";
+  let greeting = "";
 
   const currTime = weatherData.location.localtime.split(" ")[1];
-  const currHour = currTime.split(":")[0]
+  const currHour = currTime.split(":")[0];
 
   console.log(currHour);
   console.log(weatherData.location.localtime.split(" ")[1]);
 
-    if (currHour >= 5 && currHour <= 12) {
-      background += " morning";
-    } else if (currHour >= 12 && currHour <= 18) {
-      background += " afternoon";
-    } else if (currHour >=18) {
-      background += " evening";
-    }
+  if (currHour >= 5 && currHour <= 12) {
+    background += " morning";
+    greeting += "Good Morning!";
+  } else if (currHour >= 12 && currHour <= 18) {
+    background += " afternoon";
+    greeting += "Good Afternoon!";
+  } else if (currHour >= 18) {
+    background += " evening";
+    greeting += "Good Evening!";
+  }
 
   return (
     <>
+      <div className="weatherCard__greeting">{greeting}</div>
       {Object.keys(weatherData).length > 0 && (
         <div className={background}>
           <div className="weatherCard__info">
