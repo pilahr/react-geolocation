@@ -1,0 +1,11 @@
+@use "../../styles//main" as *;
+@use "../../styles/variables" as *;
+
+.search-container {
+  display: flex;
+  justify-content: center;
+
+  &__notFound {
+    margin: 100px;
+  }
+}
