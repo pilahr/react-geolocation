@@ -1,0 +1,13 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.btn {
+  height: 2rem;
+  width: 200px;
+  border-radius: 10px;
+  background-color: $color-dark-gray;
+  color: $text-white;
+  cursor: pointer;
+  box-shadow: 0px 20px 50px $color-gray;
+  margin: 3px;
+}

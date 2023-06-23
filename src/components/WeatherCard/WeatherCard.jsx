@@ -9,9 +9,6 @@ const WeatherCard = ({ weatherData }) => {
   const currTime = weatherData.location.localtime.split(" ")[1];
   const currHour = currTime.split(":")[0];
 
-  console.log(currHour);
-  console.log(weatherData.location.localtime.split(" ")[1]);
-
   if (currHour >= 5 && currHour <= 12) {
     background += " morning";
     greeting += "Good Morning!";

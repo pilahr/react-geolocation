@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Weather.scss";
 import Header from "../../components/Header/Header";
 import SearchContainer from "../../container/SearchContainer/SearchContainer";
 import WeatherContainer from "../../container/WeatherContainer/WeatherContainer";
+import Button from "../../../src/components/Button/Button";
 
-const Weather = ({ getUserLocation, weatherData }) => {
+const Weather = ({ getUserLocation, weatherData, setLocation }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchInput = (event) => {
+    event.preventDefault();
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    setLocation(searchTerm);
+  };
+
   return (
     <div className="weather">
       <div>
@@ -12,12 +24,20 @@ const Weather = ({ getUserLocation, weatherData }) => {
       </div>
       <div className="weather__wrap">
         <div>
-          <SearchContainer weatherData={weatherData} />
+          <SearchContainer
+            searchTerm={searchTerm}
+            handleSearchInput={handleSearchInput}
+          />
+        </div>
+        <div>
+          <Button label="Search" onClick={handleSubmit} />
+        </div>
+        <div>
+          <Button label="Get my location" onClick={getUserLocation} />
         </div>
 
-        <button onClick={getUserLocation}>Get my location</button>
         <div>
-          <WeatherContainer weatherData={weatherData}/>
+          <WeatherContainer weatherData={weatherData} />
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const Searchbox = ({ handleSearchInput, searchTerm }) => {
             className="searchbox__wrap--input"
             type="text"
             placeholder="Search for a city..."
-            onInput={handleSearchInput}
+            onChange={handleSearchInput}
             value={searchTerm}
           />
         </div>
