@@ -2,8 +2,6 @@
 @use "../../styles/variables" as *;
 
 .search {
-  margin-left: 20px;
-
   .searchbox {
     height: 100px;
     padding: 20px;
@@ -17,6 +15,7 @@
       border: 3px solid rgb(211, 208, 208);
       border-radius: 50px;
       box-shadow: 3px 3px 5px $color-dark-gray;
+      opacity: 0.8;
 
       &--input {
         height: 2rem;
@@ -39,9 +38,7 @@
 
 @media screen and (min-width: $tablet-breakpoint) {
   .search {
-    margin-left: 50px;
     .searchbox {
-
       &__wrap {
         width: 600px;
 
@@ -49,18 +46,11 @@
           height: inherit;
           font-size: 1.4rem;
         }
-        
+
         &--icon {
           height: inherit;
         }
       }
-
     }
-  }
-}
-
-@media screen and (min-width: $desktop-breakpoint) {
-  .search {
-    margin-left: 100px;
   }
 }
