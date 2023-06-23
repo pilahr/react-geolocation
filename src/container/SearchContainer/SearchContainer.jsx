@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Searchbox from "../../components/Searchbox/Searchbox";
 import "./SearchContainer.scss";
 
 const SearchContainer = ({ searchTerm, handleSearchInput }) => {
-
   // let searchedResult = (
   //   <h5 className="search-container__notFound">No Cities Found</h5>
   // );
