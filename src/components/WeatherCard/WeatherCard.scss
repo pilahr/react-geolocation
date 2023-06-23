@@ -1,2 +1,71 @@
 @use "../../styles/main" as *;
 @use "../../styles/variables" as *;
+
+.weatherCard {
+  margin: 20px;
+  padding: 15px;
+  display: flex;
+  height: 300px;
+  width: 300px;
+  background-color: $color-gray;
+  opacity: 0.7;
+  border: none;
+  border-radius: 10px;
+
+  &__info {
+    &--text {
+      color: $text-white;
+      font-size: 1.8rem;
+    }
+
+    &--text-city {
+      color: $text-white;
+      font-size: 1.4rem;
+      padding-top: 100px;
+    }
+
+    &--text-temp {
+      color: $text-white;
+      font-size: 1.2rem;
+    }
+
+    &--icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.morning {
+  background: url("https://hips.hearstapps.com/hmg-prod/images/good-morning-quotes-1674144479.jpg");
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+}
+
+.afternoon {
+  background: url("https://i0.wp.com/sociallover.net/wp-content/uploads/2020/12/good-afternon-image.png?fit=640%2C360&ssl=1");
+  background-size: 300px 300px;
+}
+
+.evening {
+  background: url("https://cometoserve.files.wordpress.com/2016/06/good-evening-flower-graphic.gif?w=450");
+  background-size: 300px 300px;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .weatherCard {
+        width: 500px;
+        height: 300px;
+    }
+  .morning {
+    background-size: 500px 300px;
+  }
+
+  .afternoon {
+    background-size: 500px 300px;
+  }
+
+  .evening {
+    background-size: 500px 300px;
+  }
+}

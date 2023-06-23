@@ -17,7 +17,7 @@ const Weather = ({ getUserLocation, weatherData }) => {
 
         <button onClick={getUserLocation}>Get my location</button>
         <div>
-          <WeatherContainer />
+          <WeatherContainer weatherData={weatherData}/>
         </div>
       </div>
     </div>

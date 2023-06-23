@@ -54,8 +54,6 @@ const App = () => {
     getWeatherData(location);
   }, [location]);
 
-  console.log("weather data is: ", weatherData);
-
   return (
     <>
       <Router>

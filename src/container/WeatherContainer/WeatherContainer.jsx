@@ -1,10 +1,10 @@
 import React from "react";
 import WeatherCard from "../../components/WeatherCard/WeatherCard";
 
-const WeatherContainer = () => {
+const WeatherContainer = ({weatherData}) => {
   return (
-    <div>
-      <WeatherCard />
+    <div className="weatherContainer">
+      <WeatherCard weatherData={weatherData}/>
     </div>
   );
 };
