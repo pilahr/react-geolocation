@@ -10,13 +10,13 @@ const WeatherCard = ({ weatherData }) => {
   const currHour = currTime.split(":")[0];
 
 
-  if (currHour <= 12) {
+  if (currHour < 12) {
     background += " morning";
     greeting += "Good Morning!";
   } else if (currHour >= 12 && currHour <= 18) {
     background += " afternoon";
     greeting += "Good Afternoon!";
-  } else if (currHour >= 18 || currHour < 5) {
+  } else if (currHour >= 18) {
     background += " evening";
     greeting += "Good Evening!";
   }
