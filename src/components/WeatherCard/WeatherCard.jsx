@@ -20,6 +20,8 @@ const WeatherCard = ({ weatherData }) => {
     greeting += "Good Evening!";
   }
 
+  const forecast = weatherData.forecast.forecastday[0];
+
   return (
     <>
       <div className="weatherCard__greeting">{greeting}</div>
@@ -39,12 +41,18 @@ const WeatherCard = ({ weatherData }) => {
             </div>
 
             <div className="weatherCard__info--wrap-location">
-              <img className="weatherCard__info--location-icon" src={location} alt="location pin" />
+              <img
+                className="weatherCard__info--location-icon"
+                src={location}
+                alt="location pin"
+              />
               <h4 className="weatherCard__info--text-city">
                 {weatherData.location.name}, {weatherData.location.country}
               </h4>
             </div>
-            <h6 className="weatherCard__info--text-temp">20 - 30 °C</h6>
+            <h6 className="weatherCard__info--text-temp">
+              {forecast.day.mintemp_c} - {forecast.day.maxtemp_c}°C
+            </h6>
           </div>
 
           <div>
