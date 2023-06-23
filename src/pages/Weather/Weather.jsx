@@ -3,8 +3,9 @@ import "./Weather.scss";
 import Header from "../../components/Header/Header";
 import SearchContainer from "../../container/SearchContainer/SearchContainer";
 import WeatherContainer from "../../container/WeatherContainer/WeatherContainer";
+import Button from "../../../src/components/Button/Button";
 
-const Weather = ({ getUserLocation, weatherData }) => {
+const Weather = ({ getUserLocation, weatherData, handleSearchInput }) => {
   return (
     <div className="weather">
       <div>
@@ -14,10 +15,15 @@ const Weather = ({ getUserLocation, weatherData }) => {
         <div>
           <SearchContainer weatherData={weatherData} />
         </div>
-
-        <button onClick={getUserLocation}>Get my location</button>
         <div>
-          <WeatherContainer weatherData={weatherData}/>
+          <Button label="Search" onClick={handleSearchInput}/>
+        </div>
+        <div>
+          <Button label="Get my location" onClick={getUserLocation} />
+        </div>
+
+        <div>
+          <WeatherContainer weatherData={weatherData} />
         </div>
       </div>
     </div>
