@@ -2,12 +2,26 @@ import React from "react";
 import "./WeatherCard.scss";
 
 const WeatherCard = ({ weatherData }) => {
-  console.log(weatherData);
-  console.log(weatherData.current.condition.text);
+  let background = "weatherCard";
+
+  const currTime = weatherData.location.localtime.split(" ")[1];
+  const currHour = currTime.split(":")[0]
+
+  console.log(currHour);
+  console.log(weatherData.location.localtime.split(" ")[1]);
+
+    if (currHour >= 5 && currHour <= 12) {
+      background += " morning";
+    } else if (currHour >= 12 && currHour <= 18) {
+      background += " afternoon";
+    } else if (currHour >=18) {
+      background += " evening";
+    }
+
   return (
     <>
       {Object.keys(weatherData).length > 0 && (
-        <div className="weatherCard evening">
+        <div className={background}>
           <div className="weatherCard__info">
             <div>
               <h3 className="weatherCard__info--text">
@@ -30,7 +44,11 @@ const WeatherCard = ({ weatherData }) => {
           </div>
 
           <div>
-            <img className="weatherCard__info--icon" src={weatherData.current.condition.icon} alt="weather icon" />
+            <img
+              className="weatherCard__info--icon"
+              src={weatherData.current.condition.icon}
+              alt="weather icon"
+            />
           </div>
         </div>
       )}
