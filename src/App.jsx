@@ -67,7 +67,7 @@ const App = () => {
           <Routes>
             <Route
               path="/weather"
-              element={<Weather getUserLocation={getUserLocation} />}
+              element={<Weather getUserLocation={getUserLocation} weatherData={weatherData}/>}
             />
           </Routes>
         )}

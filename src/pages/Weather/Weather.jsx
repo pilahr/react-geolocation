@@ -3,14 +3,14 @@ import "./Weather.scss";
 import Header from "../../components/Header/Header";
 import SearchContainer from "../../container/SearchContainer/SearchContainer";
 
-const Weather = ({ getUserLocation }) => {
+const Weather = ({ getUserLocation, weatherData }) => {
   return (
     <div className="weather">
       <div>
         <Header />
       </div>
       <div>
-        <SearchContainer />
+        <SearchContainer weatherData={weatherData}/>
       </div>
       <h2>hello</h2>
 

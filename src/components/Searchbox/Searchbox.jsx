@@ -2,7 +2,7 @@ import React from "react";
 import "./Searchbox.scss";
 import Search from "../../assets/search.png";
 
-const Searchbox = ({ label, handleSearchInput, searchTerm }) => {
+const Searchbox = ({ handleSearchInput, searchTerm }) => {
   return (
     <div className="search">
       <div className="searchbox">
@@ -18,7 +18,6 @@ const Searchbox = ({ label, handleSearchInput, searchTerm }) => {
             placeholder="Search for a city..."
             onInput={handleSearchInput}
             value={searchTerm}
-            name={label}
           />
         </div>
       </div>
