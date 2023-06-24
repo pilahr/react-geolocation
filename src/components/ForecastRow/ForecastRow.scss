@@ -11,11 +11,13 @@
   &__text {
     color: $text-white;
     text-align: start;
+    font-size: 1rem;
   }
 
   &__text-temp {
     color: $text-white;
     text-align: end;
+    font-size: 1rem;
   }
 
   &__icon {
@@ -29,22 +31,49 @@
     width: 700px;
 
     &__text {
-        text-align: start;
+      font-size: 1.4rem;
     }
 
     &__icon {
-        width: 80px;
-        height: 80px;
-      }
+      width: 80px;
+      height: 80px;
+    }
+    &__text-temp {
+      font-size: 1.4rem;
+    }
   }
 }
 @media screen and (min-width: $desktop-breakpoint) {
   .forecastRow {
     width: 900px;
+
+    &__text {
+      font-size: 1.8rem;
+    }
+
+    &__icon {
+      width: 100px;
+      height: 100px;
+    }
+    &__text-temp {
+      font-size: 1.8rem;
+    }
   }
 }
 @media screen and (min-width: $large-desktop-breakpoint) {
   .forecastRow {
     width: 1200px;
+
+    &__text {
+      font-size: 2rem;
+    }
+
+    &__icon {
+      width: 120px;
+      height: 120px;
+    }
+    &__text-temp {
+      font-size: 2rem;
+    }
   }
 }

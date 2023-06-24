@@ -107,7 +107,7 @@ const Weather = ({ weatherData, setLocation }) => {
           />
         </div>
 
-        <div className="weather__wrap--forecastCard">
+        <div className="weather__wrap--forecastRow">
           {forecast.map((day, index) => {
             return (
               <div key={index}>
