@@ -36,9 +36,9 @@ const WeatherCard = ({ weatherData }) => {
             </div>
 
             <div>
-              <h2 className="weatherCard__info--text">
+              <h3 className="weatherCard__info--text">
                 {weatherData.current.condition.text}
-              </h2>
+              </h3>
             </div>
 
             <div className="weatherCard__info--wrap-location">
@@ -47,13 +47,13 @@ const WeatherCard = ({ weatherData }) => {
                 src={location}
                 alt="location pin"
               />
-              <h4 className="weatherCard__info--text-city">
+              <h5 className="weatherCard__info--text-city">
                 {weatherData.location.name}, {weatherData.location.country}
-              </h4>
+              </h5>
             </div>
-            <h6 className="weatherCard__info--text-temp">
-              {forecast.day.mintemp_c} - {forecast.day.maxtemp_c}°C
-            </h6>
+            <p className="weatherCard__info--text-temp">
+              H:{forecast.day.mintemp_c}° L:{forecast.day.maxtemp_c}°
+            </p>
           </div>
 
           <div>

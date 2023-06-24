@@ -6,7 +6,7 @@
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  height: 300px;
+  height: 200px;
   width: 300px;
   background-color: $color-gray;
   opacity: 0.7;
@@ -27,96 +27,104 @@
 
     &--text-city {
       color: $text-white;
-      font-size: 1.4rem;
+      font-size: 1rem;
     }
 
     &--text-temp {
       color: $text-white;
-      font-size: 1.2rem;
+      font-size: 1rem;
       padding-left: 30px;
     }
 
     &--icon {
       width: 100px;
       height: 100px;
-      background-color: $color-gray;
       border-radius: 10px;
     }
 
     &--wrap-location {
       display: flex;
       align-items: flex-start;
-      margin-top: 70px;
+      margin-top: 20px;
     }
 
-    &--location-icon {
-      width: 30px;
-      height: 30px;
-    }
   }
 }
 
 .morning {
-  background: url("https://hips.hearstapps.com/hmg-prod/images/good-morning-quotes-1674144479.jpg");
-  background-size: 300px 300px;
-  background-repeat: no-repeat;
+  background-color: rgba(215, 160, 30, 0.5);
 }
 
 .afternoon {
-  background: url("https://i0.wp.com/sociallover.net/wp-content/uploads/2020/12/good-afternon-image.png?fit=640%2C360&ssl=1");
-  background-size: 300px 300px;
-  background-repeat: no-repeat;
+  background-color: rgba(112, 48, 181, 0.5);
 }
 
 .evening {
-  background: url("https://www.wishesmsg.com/wp-content/uploads/Good-Evening-Message.jpg");
-  background-size: 300px 300px;
-  background-repeat: no-repeat;
+  background-color: rgb(38, 138, 171, 0.5);
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
   .weatherCard {
-    width: 500px;
+    width: 700px;
     height: 300px;
-  }
-  .morning {
-    background-size: 500px 300px;
-  }
 
-  .afternoon {
-    background-size: 500px 300px;
-  }
+    &__info {
+      &--wrap-location {
+        margin-top: 70px;
+      }
 
-  .evening {
-    background-size: 500px 300px;
+      &--icon {
+        width: 160px;
+        height: 160px;
+      }
+
+      &--text {
+        font-size: 2rem;
+      }
+
+      &--text-city {
+        font-size: 1.6rem;
+      }
+
+      &--text-temp {
+        font-size: 1.6rem;
+      }
+    }
   }
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
   .weatherCard {
-    width: 800px;
+    width: 900px;
     height: 400px;
 
     &__info {
       &--wrap-location {
         margin-top: 160px;
-      }
 
-      &--icon {
-        width: 150px;
-        height: 150px;
+        &--icon {
+          width: 200px;
+          height: 200px;
+        }
       }
     }
   }
-  .morning {
-    background-size: 800px 400px;
-  }
+}
 
-  .afternoon {
-    background-size: 800px 400px;
-  }
+@media screen and (min-width: $large-desktop-breakpoint) {
+  .weatherCard {
+    width: 1200px;
+    height: 400px;
 
-  .evening {
-    background-size: 800px 400px;
+    &__info {
+      &--wrap-location {
+        margin-top: 160px;
+
+        &--icon {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
   }
 }
