@@ -28,6 +28,66 @@
     color: $text-white;
     font-size: 1.4rem;
   }
+}
 
+@media screen and (min-width: $tablet-breakpoint) {
+  .forecastCard {
+    width: 160px;
+    height: 160px;
 
+    &__header {
+      font-size: 1rem;
+    }
+
+    &__icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .forecastCard {
+    width: 210px;
+    height: 210px;
+
+    &__header {
+      font-size: 1.2rem;
+    }
+
+    &__icon {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__text {
+      text-align: center;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media screen and (min-width: $large-desktop-breakpoint) {
+  .forecastCard {
+    width: 260px;
+    height: 260px;
+    margin: 20px;
+
+    &__header {
+      font-size: 1.3rem;
+    }
+
+    &__icon {
+      width: 120px;
+      height: 120px;
+    }
+
+    &__text {
+      font-size: 2rem;
+    }
+  }
 }
