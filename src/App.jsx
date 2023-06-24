@@ -7,7 +7,7 @@ import Weather from "./pages/Weather/Weather";
 const App = () => {
   const [user, setUser] = useState();
   const [weatherData, setWeatherData] = useState({});
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState("London");
 
   const geolocationAPI = navigator.geolocation;
 
@@ -44,8 +44,10 @@ const App = () => {
       }
 
       const data = await response.json();
-      setWeatherData(data);
+
       getUserLocation(data);
+      setWeatherData(data);
+
     } catch (e) {
       alert(e.message);
     }
@@ -53,8 +55,7 @@ const App = () => {
 
   useEffect(() => {
     getWeatherData(location);
-    getUserLocation(location);
-  }, [location, location]);
+  }, [location]);
 
   return (
     <>
