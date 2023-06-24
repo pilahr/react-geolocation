@@ -45,7 +45,6 @@ const App = () => {
 
       const data = await response.json();
       setWeatherData(data);
-      getUserLocation(data);
     } catch (e) {
       alert(e.message);
     }
