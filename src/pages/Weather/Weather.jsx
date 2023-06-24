@@ -6,7 +6,12 @@ import WeatherContainer from "../../container/WeatherContainer/WeatherContainer"
 import Button from "../../../src/components/Button/Button";
 import ForecastRow from "../../components/ForecastRow/ForecastRow";
 import ForecastCard from "../../components/ForecastCard/ForecastCard";
-import AirQuality from "../../assets/AirQuality.png";
+import AirQuality from "../../assets/airQualityIcon.svg";
+import Rain from "../../assets/rain.png";
+import Wind from "../../assets/Wind.png";
+import Humidity from "../../assets/humidity.png";
+import Sunrise from "../../assets/sunrise.svg";
+import Sunset from "../../assets/sunset.png";
 
 const Weather = ({ weatherData, setLocation }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,7 +28,7 @@ const Weather = ({ weatherData, setLocation }) => {
 
   const forecast = weatherData.forecast.forecastday;
 
-  // console.log(aqi);
+  const todayForecast = forecast[0];
 
   const getAirQuality = () => {
     const aqi = weatherData.current.air_quality["us-epa-index"];
@@ -64,12 +69,41 @@ const Weather = ({ weatherData, setLocation }) => {
         <div>
           <WeatherContainer weatherData={weatherData} />
         </div>
-        <div>
+        <div className="weather__wrap--blogs">
           <ForecastCard
-            label="Air Quality"
+            label="AIR QUALITY"
             icon={AirQuality}
-            airQuality={airQuality}
             result={airQuality}
+          />
+
+          <ForecastCard
+            label="CHANCE OF RAIN"
+            icon={Rain}
+            result={todayForecast.day.daily_chance_of_rain}
+          />
+
+          <ForecastCard
+            label="WIND"
+            icon={Wind}
+            result={todayForecast.day.maxwind_mph}
+          />
+
+          <ForecastCard
+            label="HUMIDITY"
+            icon={Humidity}
+            result={todayForecast.day.avghumidity}
+          />
+
+          <ForecastCard
+            label="SUNRISE"
+            icon={Sunrise}
+            result={todayForecast.astro.sunrise}
+          />
+
+          <ForecastCard
+            label="SUNSET"
+            icon={Sunset}
+            result={todayForecast.astro.sunset}
           />
         </div>
 
