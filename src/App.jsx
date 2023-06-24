@@ -29,7 +29,7 @@ const App = () => {
     setLocation("London");
   };
 
-  const getWeatherData = async (location) => {
+  const getWeatherData = async () => {
     const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
 
     try {
