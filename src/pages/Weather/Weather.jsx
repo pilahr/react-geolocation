@@ -27,15 +27,15 @@ const Weather = ({ getUserLocation, weatherData, setLocation }) => {
       </div>
 
       <div className="weather__wrap">
-        <div>
+        <div className="weather__wrap--search-and-btn">
           <SearchContainer
             searchTerm={searchTerm}
             handleSearchInput={handleSearchInput}
           />
-        </div>
-        <div>
           <Button label="Search" onClick={handleSubmit} />
         </div>
+        <div></div>
+
         <div>
           <Button label="Get my location" onClick={getUserLocation} />
         </div>
