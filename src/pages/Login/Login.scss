@@ -2,7 +2,7 @@
 @use "../../styles/variables" as *;
 
 .login {
-  background: linear-gradient(-45deg, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #e73c7e, #23a6d5, pink, purple);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -18,7 +18,7 @@
     top: 50%;
     transform: translateY(-50%);
     max-width: 300px;
-    background-color:$color-black-translucent;
+    background-color: $color-black-translucent;
     color: $text-white;
     border-radius: 5px;
     text-align: center;
