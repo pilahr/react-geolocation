@@ -4,7 +4,6 @@ import Header from "../../components/Header/Header";
 import SearchContainer from "../../container/SearchContainer/SearchContainer";
 import WeatherContainer from "../../container/WeatherContainer/WeatherContainer";
 import Button from "../../../src/components/Button/Button";
-import ForecastCard from "../../components/ForecastCard/ForecastCard";
 import ForecastRow from "../../components/ForecastRow/ForecastRow";
 
 const Weather = ({ getUserLocation, weatherData, setLocation }) => {
