@@ -34,11 +34,6 @@ const Weather = ({ getUserLocation, weatherData, setLocation }) => {
           />
           <Button label="Search" onClick={handleSubmit} />
         </div>
-        <div></div>
-
-        <div>
-          <Button label="Get my location" onClick={getUserLocation} />
-        </div>
 
         <div>
           <WeatherContainer weatherData={weatherData} />
@@ -48,7 +43,6 @@ const Weather = ({ getUserLocation, weatherData, setLocation }) => {
             return (
               <div key={index}>
                 <ForecastRow day={day} />
-                {/* <ForecastCard weatherData={weatherData} day={day} /> */}
               </div>
             );
           })}
