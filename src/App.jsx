@@ -7,7 +7,7 @@ import Weather from "./pages/Weather/Weather";
 const App = () => {
   const [user, setUser] = useState();
   const [weatherData, setWeatherData] = useState({});
-  const [location, setLocation] = useState("bangkok");
+  const [location, setLocation] = useState(null);
 
   const geolocationAPI = navigator.geolocation;
 
@@ -26,54 +26,33 @@ const App = () => {
   };
 
   const error = () => {
-    alert("Unable to retrieve your location");
+    setLocation("London");
   };
 
-  // const getWeatherData = async (location) => {
-  //   const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
+  const getWeatherData = async (location) => {
+    const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
 
-  //   try {
-  //     let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
+    try {
+      let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
 
-  //     url += `&q=${location}&days=7&aqi=yes&alerts=no`;
+      url += `&q=${location}&days=7&aqi=yes&alerts=no`;
 
-  //     const response = await fetch(url);
+      const response = await fetch(url);
 
-  //     if (!response.ok) {
-  //       throw new Error("Sorry something went wrong!");
-  //     }
+      if (!response.ok) {
+        throw new Error("Sorry something went wrong!");
+      }
 
-  //     const data = await response.json();
-
-  //     setWeatherData(data);
-  //   } catch (e) {
-  //     alert(e.message);
-  //   }
-  // };
+      const data = await response.json();
+      setWeatherData(data);
+      
+    } catch (e) {
+      alert(e.message);
+    }
+  };
 
   useEffect(() => {
-    // getWeatherData(location);
-    const getWeatherData = async (location) => {
-      const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
-  
-      try {
-        let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
-  
-        url += `&q=${location}&days=7&aqi=yes&alerts=no`;
-  
-        const response = await fetch(url);
-  
-        if (!response.ok) {
-          throw new Error("Sorry something went wrong!");
-        }
-  
-        const data = await response.json();
-  
-        setWeatherData(data);
-      } catch (e) {
-        alert(e.message);
-      }
-    };
+    getWeatherData(location);
   }, [location]);
 
   return (
