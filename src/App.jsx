@@ -54,7 +54,7 @@ const App = () => {
   useEffect(() => {
     getWeatherData(location);
     getUserLocation(location);
-  }, [location]);
+  }, [location, location]);
 
   return (
     <>
