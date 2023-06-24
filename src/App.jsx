@@ -7,7 +7,7 @@ import Weather from "./pages/Weather/Weather";
 const App = () => {
   const [user, setUser] = useState();
   const [weatherData, setWeatherData] = useState({});
-  const [location, setLocation] = useState("bangkok");
+  const [location, setLocation] = useState(null);
 
   const geolocationAPI = navigator.geolocation;
 
@@ -18,6 +18,7 @@ const App = () => {
       geolocationAPI.getCurrentPosition(success, error);
     }
   };
+
   const success = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -25,7 +26,7 @@ const App = () => {
   };
 
   const error = () => {
-    alert("Unable to retrieve your location");
+    setLocation("London");
   };
 
   const getWeatherData = async (location) => {
@@ -44,6 +45,7 @@ const App = () => {
 
       const data = await response.json();
       setWeatherData(data);
+      getUserLocation(data);
     } catch (e) {
       alert(e.message);
     }
