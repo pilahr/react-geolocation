@@ -17,6 +17,14 @@
       display: flex;
       align-items: center;
     }
+
+    &--blogs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 300px;
+      margin-bottom: 20px;
+      justify-items: center;
+    }
   }
 }
 @keyframes gradient {
@@ -38,8 +46,32 @@
         display: flex;
         align-items: center;
       }
+
+      &--blogs {
+        width: 700px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
   }
 }
 
+@media screen and (min-width: $desktop-breakpoint) {
+  .weather {
+    &__wrap {
+      &--blogs {
+        width: 900px;
+      }
+    }
+  }
+}
 
+@media screen and (min-width: $large-desktop-breakpoint) {
+  .weather {
+    &__wrap {
+      &--blogs {
+        width: 1200px;
+      }
+    }
+  }
+}
