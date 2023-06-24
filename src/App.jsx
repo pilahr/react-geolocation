@@ -51,7 +51,10 @@ const App = () => {
   };
 
   useEffect(() => {
-    getUserLocation(location);
+    getUserLocation();
+  }, []);
+
+  useEffect(() => {
     getWeatherData(location);
   }, [location]);
 
