@@ -45,16 +45,13 @@ const App = () => {
 
       const data = await response.json();
 
-      getUserLocation(data);
+      getUserLocation(location);
       setWeatherData(data);
+
     } catch (e) {
       alert(e.message);
     }
   };
-
-  useEffect(() => {
-    getUserLocation();
-  }, []);
 
   useEffect(() => {
     getWeatherData(location);
