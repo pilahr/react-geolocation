@@ -2,7 +2,7 @@
 @use "../../styles/variables" as *;
 
 .weather {
-  background: linear-gradient(-45deg, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #e73c7e, #23a6d5, pink, purple);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100%;
@@ -14,15 +14,15 @@
     align-items: center;
 
     &--forecastCard {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      height: 200px;
-      width: 330px;
-      overflow-y: scroll;
-      margin: 10px;
-      background-color: $color-dark-gray;
-      border-radius: 50px;
+      // display: flex;
+      // flex-direction: row;
+      // align-items: center;
+      // height: 200px;
+      // width: 330px;
+      // overflow-y: scroll;
+      // margin: 10px;
+      // background-color: $color-dark-gray;
+      // border-radius: 50px;
     }
   }
 }
@@ -42,10 +42,10 @@
   .weather {
     &__wrap {
       &--forecastCard {
-        display: flex;
-        justify-content: center;
-        overflow-x: scroll;
-        width: 500px;
+        // display: flex;
+        // justify-content: center;
+        // overflow-x: scroll;
+        // width: 500px;
       }
     }
   }
@@ -54,10 +54,18 @@
 @media screen and (min-width: $desktop-breakpoint) {
   .weather {
     &__wrap {
-      &--forecastCard {
-        width: 800px;
-        height: 260px;
-      }
+      // &--forecastCard {
+      //   display: flex;
+      //   flex-direction: row;
+      //   align-items: center;
+      //   overflow-y: scroll;
+      //   margin: 10px;
+      //   background-color: $color-dark-gray;
+      //   border-radius: 50px;
+
+      //   width: 800px;
+      //   height: 260px;
+      // }
     }
   }
 }
