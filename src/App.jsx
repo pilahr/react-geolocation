@@ -18,6 +18,7 @@ const App = () => {
       geolocationAPI.getCurrentPosition(success, error);
     }
   };
+
   const success = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -28,29 +29,51 @@ const App = () => {
     alert("Unable to retrieve your location");
   };
 
-  const getWeatherData = async (location) => {
-    const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
+  // const getWeatherData = async (location) => {
+  //   const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
 
-    try {
-      let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
+  //   try {
+  //     let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
 
-      url += `&q=${location}&days=7&aqi=yes&alerts=no`;
+  //     url += `&q=${location}&days=7&aqi=yes&alerts=no`;
 
-      const response = await fetch(url);
+  //     const response = await fetch(url);
 
-      if (!response.ok) {
-        throw new Error("Sorry something went wrong!");
-      }
+  //     if (!response.ok) {
+  //       throw new Error("Sorry something went wrong!");
+  //     }
 
-      const data = await response.json();
-      setWeatherData(data);
-    } catch (e) {
-      alert(e.message);
-    }
-  };
+  //     const data = await response.json();
+
+  //     setWeatherData(data);
+  //   } catch (e) {
+  //     alert(e.message);
+  //   }
+  // };
 
   useEffect(() => {
-    getWeatherData(location);
+    // getWeatherData(location);
+    const getWeatherData = async (location) => {
+      const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
+  
+      try {
+        let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
+  
+        url += `&q=${location}&days=7&aqi=yes&alerts=no`;
+  
+        const response = await fetch(url);
+  
+        if (!response.ok) {
+          throw new Error("Sorry something went wrong!");
+        }
+  
+        const data = await response.json();
+  
+        setWeatherData(data);
+      } catch (e) {
+        alert(e.message);
+      }
+    };
   }, [location]);
 
   return (
