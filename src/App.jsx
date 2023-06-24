@@ -47,7 +47,6 @@ const App = () => {
 
       getUserLocation(data);
       setWeatherData(data);
-
     } catch (e) {
       alert(e.message);
     }
@@ -55,7 +54,7 @@ const App = () => {
 
   useEffect(() => {
     getWeatherData(location);
-  }, [location]);
+  }, []);
 
   return (
     <>
