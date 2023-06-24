@@ -1,0 +1,50 @@
+@use "../../styles//main" as *;
+@use "../../styles/variables" as *;
+
+.forecastRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $color-white-translucent;
+  width: 300px;
+
+  &__text {
+    color: $text-white;
+    text-align: start;
+  }
+
+  &__text-temp {
+    color: $text-white;
+    text-align: end;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .forecastRow {
+    width: 700px;
+
+    &__text {
+        text-align: start;
+    }
+
+    &__icon {
+        width: 80px;
+        height: 80px;
+      }
+  }
+}
+@media screen and (min-width: $desktop-breakpoint) {
+  .forecastRow {
+    width: 900px;
+  }
+}
+@media screen and (min-width: $large-desktop-breakpoint) {
+  .forecastRow {
+    width: 1200px;
+  }
+}

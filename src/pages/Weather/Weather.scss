@@ -54,18 +54,18 @@
 @media screen and (min-width: $desktop-breakpoint) {
   .weather {
     &__wrap {
-      &--forecastCard {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        overflow-y: scroll;
-        margin: 10px;
-        background-color: $color-dark-gray;
-        border-radius: 50px;
+      // &--forecastCard {
+      //   display: flex;
+      //   flex-direction: row;
+      //   align-items: center;
+      //   overflow-y: scroll;
+      //   margin: 10px;
+      //   background-color: $color-dark-gray;
+      //   border-radius: 50px;
 
-        width: 800px;
-        height: 260px;
-      }
+      //   width: 800px;
+      //   height: 260px;
+      // }
     }
   }
 }

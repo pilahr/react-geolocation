@@ -5,6 +5,7 @@ import SearchContainer from "../../container/SearchContainer/SearchContainer";
 import WeatherContainer from "../../container/WeatherContainer/WeatherContainer";
 import Button from "../../../src/components/Button/Button";
 import ForecastCard from "../../components/ForecastCard/ForecastCard";
+import ForecastRow from "../../components/ForecastRow/ForecastRow";
 
 const Weather = ({ getUserLocation, weatherData, setLocation }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -44,15 +45,15 @@ const Weather = ({ getUserLocation, weatherData, setLocation }) => {
           <WeatherContainer weatherData={weatherData} />
         </div>
         <div className="weather__wrap--forecastCard">
-                  {forecast.map((day, index) => {
-          return (
-            <div key={index} >
-              <ForecastCard weatherData={weatherData} day={day} />
-            </div>
-          );
-        })}
+          {forecast.map((day, index) => {
+            return (
+              <div key={index}>
+                <ForecastRow day={day} />
+                {/* <ForecastCard weatherData={weatherData} day={day} /> */}
+              </div>
+            );
+          })}
         </div>
-
       </div>
     </div>
   );
