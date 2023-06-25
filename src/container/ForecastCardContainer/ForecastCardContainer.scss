@@ -1,0 +1,33 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+
+//weather__wrap--blogs
+.forecastCardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+    margin-bottom: 20px;
+    justify-items: center;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .forecastCardContainer {
+        width: 700px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .forecastCardContainer {
+        width: 900px;
+
+    }
+}
+
+@media screen and (min-width: $large-desktop-breakpoint) {
+    .forecastCardContainer {
+        width: 1200px;
+    }
+}
