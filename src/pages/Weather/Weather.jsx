@@ -6,6 +6,7 @@ import ForecastRow from "../../components/ForecastRow/ForecastRow";
 import WeatherCard from "../../components/WeatherCard/WeatherCard";
 import Searchbox from "../../components/Searchbox/Searchbox";
 import ForecastCardContainer from "../../container/ForecastCardContainer/ForecastCardContainer";
+import ForecastHourlyContainer from "../../container/ForecastHourlyContainer/ForecastHourlyContainer";
 
 const Weather = ({ weatherData, setLocation }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -38,6 +39,9 @@ const Weather = ({ weatherData, setLocation }) => {
 
         <div>
           <WeatherCard weatherData={weatherData} />
+        </div>
+        <div>
+          <ForecastHourlyContainer forecast={forecast} weatherData={weatherData}/>
         </div>
         <div>
           <ForecastCardContainer weatherData={weatherData} />

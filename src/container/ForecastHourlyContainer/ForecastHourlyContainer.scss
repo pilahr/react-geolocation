@@ -1,0 +1,31 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.forecastHourlyContainer {
+  width: 300px;
+  height: 140px;
+  background-color: $color-white-translucent;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .forecastHourlyContainer {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .forecastHourlyContainer {
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: $large-desktop-breakpoint) {
+  .forecastHourlyContainer {
+    width: 1200px;
+  }
+}
