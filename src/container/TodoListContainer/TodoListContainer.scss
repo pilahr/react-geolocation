@@ -1,0 +1,30 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.todoListContainer {
+  width: 300px;
+  height: auto;
+  margin: 50px 0;
+  border-top: 2px solid $color-white-translucent;
+  background-color: $color-white-translucent;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .todoListContainer {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .todoListContainer {
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: $large-desktop-breakpoint) {
+  .todoListContainer {
+    width: 1200px;
+  }
+}

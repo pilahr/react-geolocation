@@ -7,6 +7,7 @@ import WeatherCard from "../../components/WeatherCard/WeatherCard";
 import Searchbox from "../../components/Searchbox/Searchbox";
 import ForecastCardContainer from "../../container/ForecastCardContainer/ForecastCardContainer";
 import ForecastHourlyContainer from "../../container/ForecastHourlyContainer/ForecastHourlyContainer";
+import TodoListContainer from "../../container/TodoListContainer/TodoListContainer";
 
 const Weather = ({ weatherData, setLocation }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,7 +42,10 @@ const Weather = ({ weatherData, setLocation }) => {
           <WeatherCard weatherData={weatherData} />
         </div>
         <div>
-          <ForecastHourlyContainer forecast={forecast} weatherData={weatherData}/>
+          <ForecastHourlyContainer
+            forecast={forecast}
+            weatherData={weatherData}
+          />
         </div>
         <div>
           <ForecastCardContainer weatherData={weatherData} />
@@ -55,6 +59,10 @@ const Weather = ({ weatherData, setLocation }) => {
               </div>
             );
           })}
+        </div>
+
+        <div>
+          <TodoListContainer />
         </div>
       </div>
     </div>
