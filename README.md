@@ -10,6 +10,9 @@ This project is a front-end project was built in REACT with mobile-first design.
 
 [Live Demo](https://react-geolocation-project-01.web.app/)
 
+MockUser: tellmetheweather1@gmail.com
+Password: weather1234
+
 ### `Feature`
 
 The project was deployed on Firebase with Github action used.
