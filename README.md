@@ -8,7 +8,7 @@
 
 This project is a front-end project was built in REACT with mobile-first design.
 
-[[Live Demo]]
+[Live Demo]
 (https://react-geolocation-project-01.web.app/)
 
 ### `Feature`
