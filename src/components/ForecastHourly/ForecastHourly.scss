@@ -1,0 +1,26 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.forecastHourly {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+
+  &__time {
+    text-align: center;
+    color: $text-white;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__temp {
+    text-align: center;
+    color: $text-white;
+  }
+}
