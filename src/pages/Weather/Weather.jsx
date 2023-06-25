@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Weather.scss";
 import Header from "../../components/Header/Header";
-import SearchContainer from "../../container/SearchContainer/SearchContainer";
-import WeatherContainer from "../../container/WeatherContainer/WeatherContainer";
 import Button from "../../../src/components/Button/Button";
 import ForecastRow from "../../components/ForecastRow/ForecastRow";
 import ForecastCard from "../../components/ForecastCard/ForecastCard";
@@ -12,6 +10,8 @@ import Wind from "../../assets/Wind.png";
 import Humidity from "../../assets/humidity.png";
 import Sunrise from "../../assets/sunrise.svg";
 import Sunset from "../../assets/sunset.png";
+import WeatherCard from "../../components/WeatherCard/WeatherCard";
+import Searchbox from "../../components/Searchbox/Searchbox";
 
 const Weather = ({ weatherData, setLocation }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -59,7 +59,7 @@ const Weather = ({ weatherData, setLocation }) => {
 
       <div className="weather__wrap">
         <div className="weather__wrap--search-and-btn">
-          <SearchContainer
+          <Searchbox
             searchTerm={searchTerm}
             handleSearchInput={handleSearchInput}
           />
@@ -67,7 +67,7 @@ const Weather = ({ weatherData, setLocation }) => {
         </div>
 
         <div>
-          <WeatherContainer weatherData={weatherData} />
+          <WeatherCard weatherData={weatherData} />
         </div>
         <div className="weather__wrap--blogs">
           <ForecastCard
