@@ -5,7 +5,7 @@
 ![80CAED8D-9E9C-4C20-9EF5-2A4C26B3825D](https://github.com/pilahr/react-geolocation/assets/125895065/867216fc-2f28-4606-8474-5e56a03e820c)
 
 
-This project is a front-end project was built in REACT
+This project is a front-end project was built in REACT with mobile-first design.
 
 [Live Demo](https://react-geolocation-project-01.web.app/)
 
