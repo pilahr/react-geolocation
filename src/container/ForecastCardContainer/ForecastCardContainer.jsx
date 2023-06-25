@@ -38,34 +38,34 @@ const ForecastCardContainer = ({ weatherData }) => {
 
   return (
     <div className="forecastCardContainer">
-      <ForecastCard label="AIR QUALITY" icon={AirQuality} result={airQuality} />
+      <ForecastCard label="air quality" icon={AirQuality} result={airQuality} />
 
       <ForecastCard
-        label="CHANCE OF RAIN"
+        label="chance of rain"
         icon={Rain}
         result={todayForecast.day.daily_chance_of_rain}
       />
 
       <ForecastCard
-        label="WIND"
+        label="wind"
         icon={Wind}
         result={todayForecast.day.maxwind_mph}
       />
 
       <ForecastCard
-        label="HUMIDITY"
+        label="humidity"
         icon={Humidity}
         result={todayForecast.day.avghumidity}
       />
 
       <ForecastCard
-        label="SUNRISE"
+        label="sunrise"
         icon={Sunrise}
         result={todayForecast.astro.sunrise}
       />
 
       <ForecastCard
-        label="SUNSET"
+        label="sunset"
         icon={Sunset}
         result={todayForecast.astro.sunset}
       />

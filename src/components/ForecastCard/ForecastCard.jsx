@@ -2,6 +2,7 @@ import React from "react";
 import "./ForecastCard.scss";
 
 const ForecastCard = ({ result, label, icon }) => {
+  label = label.toUpperCase();
   return (
     <div className="forecastCard">
       <h3 className="forecastCard__header">{label}</h3>
