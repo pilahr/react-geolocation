@@ -3,7 +3,7 @@ import "./Login.scss";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import Header from "../../components/Header/Header";
 import { useState } from "react";
-import { auth } from "../../firebase";
+import { auth } from "../../firebase.config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +35,7 @@ const Login = ({ setUser }) => {
         <Header />
       </div>
       <div>
-        <h2 className="login__text">Want to know what is going on outside? todayyyy </h2>
+        <h2 className="login__text">Want to know what is going on outside? today </h2>
         <h4 className="login__text">
           Log In & Check how the weather is like today..
         </h4>
