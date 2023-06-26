@@ -32,11 +32,11 @@ const App = () => {
   };
 
   const getWeatherData = async (location) => {
-    const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
-    console.log(apiKey);
+    // const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
+    // console.log(apiKey);
 
     try {
-      let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}`;
+      let url = `https://api.weatherapi.com/v1/forecast.json?key=b5413581c1f64c8a874163553232106`;
 
       url += `&q=${location}&days=7&aqi=yes&alerts=no`;
 
