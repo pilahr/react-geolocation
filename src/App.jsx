@@ -9,6 +9,8 @@ const App = () => {
   const [weatherData, setWeatherData] = useState({});
   const [location, setLocation] = useState("bangkok");
 
+  console.log(process.env.REACT_APP_OLLIE);
+
   const geolocationAPI = navigator.geolocation;
 
   const getUserLocation = () => {
@@ -30,7 +32,7 @@ const App = () => {
   };
 
   const getWeatherData = async (location) => {
-    const apiKey = `${process.env.REACT_APP_FIREBASE_WEATHER_API_KEY}`;
+    const apiKey = `${process.env.REACT_APP_WEATHER_API_KEY}`;
     console.log(apiKey);
 
     try {
