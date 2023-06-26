@@ -15,7 +15,15 @@ const ForecastHourlyContainer = ({ weatherData }) => {
 
   return (
     <div className="forecastHourlyContainer">
-      <ForecastHourly hourlyData={timeOfTheDay} tomorrowTime={tomorrowTime} currentHour={currentHour} />
+      <h3 className="forecastHourlyContainer__header" >Hourly Forecast</h3>
+      <div className="forecastHourlyContainer__wrap">
+      
+        <ForecastHourly
+          hourlyData={timeOfTheDay}
+          tomorrowTime={tomorrowTime}
+          currentHour={currentHour}
+        />
+      </div>
     </div>
   );
 };
