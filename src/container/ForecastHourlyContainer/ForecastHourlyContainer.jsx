@@ -8,12 +8,14 @@ const ForecastHourlyContainer = ({ weatherData }) => {
 
   const forecast = weatherData.forecast.forecastday;
   const today = forecast[0];
+  const tomorrow = forecast[1];
 
   const timeOfTheDay = today.hour;
+  const tomorrowTime = tomorrow.hour;
 
   return (
     <div className="forecastHourlyContainer">
-      <ForecastHourly hourlyData={timeOfTheDay} currentHour={currentHour} />
+      <ForecastHourly hourlyData={timeOfTheDay} tomorrowTime={tomorrowTime} currentHour={currentHour} />
     </div>
   );
 };
