@@ -11,7 +11,7 @@ const TodoList = ({
 }) => {
   return (
     <div className="todoList">
-      <h2 className="todoList__header">Todo List..</h2>
+      <h2 className="todoList__header">To Do List..</h2>
       <div className="todoList__wrap">
         <input
           className="todoList__wrap--input"
