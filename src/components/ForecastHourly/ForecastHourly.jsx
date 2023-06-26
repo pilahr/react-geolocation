@@ -8,6 +8,7 @@ const ForecastHourly = ({ hourlyData, tomorrowTime, currentHour }) => {
 
   return (
     <>
+    
       {wantedHour.map((hourOfTheDay, index) => {
         const cleanHour = parseInt(
           hourOfTheDay.time.split(" ")[1].split(":")[0]
