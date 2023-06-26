@@ -50,5 +50,9 @@
     &--icon {
       width: 5%;
     }
+
+    &--icon:hover {
+      cursor: pointer;
+    }
   }
 }
