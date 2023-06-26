@@ -23,7 +23,6 @@ const TodoListContainer = () => {
 
     setTasks((oldList) => [...oldList, task]);
     setNewTask("");
-    console.log(tasks);
   };
 
   const handleDeleteTask = (id) => {
