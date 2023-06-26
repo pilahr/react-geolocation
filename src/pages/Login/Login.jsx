@@ -3,7 +3,7 @@ import "./Login.scss";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import Header from "../../components/Header/Header";
 import { useState } from "react";
-import { auth } from "../../firebase";
+import { auth } from "../../firebase.config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
