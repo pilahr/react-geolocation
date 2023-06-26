@@ -2,13 +2,13 @@ import React from "react";
 import "./ForecastHourly.scss";
 
 const ForecastHourly = ({ hourlyData, tomorrowTime, currentHour }) => {
+  
   const wantedHour = hourlyData.filter((each) => {
     return each.time.split(" ")[1].split(":")[0] >= currentHour;
   });
 
   return (
     <>
-    
       {wantedHour.map((hourOfTheDay, index) => {
         const cleanHour = parseInt(
           hourOfTheDay.time.split(" ")[1].split(":")[0]
@@ -36,7 +36,6 @@ const ForecastHourly = ({ hourlyData, tomorrowTime, currentHour }) => {
           <div key={index} className="forecastHourly">
             <h4 className="forecastHourly__time">
               {cleanTmrHour}
-
             </h4>
             <img
               className="forecastHourly__icon"

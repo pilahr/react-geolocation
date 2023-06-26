@@ -4,11 +4,13 @@
 .forecastHourlyContainer {
   background-color: $color-white-translucent;
   border-radius: 10px;
+
   &__header {
     color: $text-white;
     padding: 5px 20px;
     border-bottom: 1px solid $color-white-translucent;
   }
+
   &__wrap {
     width: 300px;
     height: 140px;

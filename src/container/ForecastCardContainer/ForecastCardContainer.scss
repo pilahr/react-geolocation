@@ -1,8 +1,6 @@
 @use "../../styles/main" as *;
 @use "../../styles/variables" as *;
 
-
-//weather__wrap--blogs
 .forecastCardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -22,7 +20,6 @@
 @media screen and (min-width: $desktop-breakpoint) {
     .forecastCardContainer {
         width: 900px;
-
     }
 }
 
