@@ -35,9 +35,9 @@ const Login = ({ setUser }) => {
         <Header />
       </div>
       <div>
-        <h2 className="login__text">Want to know what is going on outside?</h2>
+        <h2 className="login__text">Want to know what is going on outside ?</h2>
         <h4 className="login__text">
-          Log In & Check how the weather is like today..
+          Log In & Check how the weather is like today...
         </h4>
       </div>
       <div className="login__form">
