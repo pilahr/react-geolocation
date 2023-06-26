@@ -51,7 +51,7 @@ const WeatherCard = ({ weatherData }) => {
               </h5>
             </div>
             <p className="weatherCard__info--text-temp">
-              H:{forecast.day.mintemp_c}° L:{forecast.day.maxtemp_c}°
+              H:{forecast.day.maxtemp_c}° L:{forecast.day.mintemp_c}°
             </p>
           </div>
 
