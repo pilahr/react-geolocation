@@ -10,7 +10,6 @@
 
 <img width="1278" alt="717B13C8-5547-4336-96B7-8F5FBE5614B5" src="https://github.com/pilahr/react-geolocation/assets/125895065/9d78419d-46ff-4d96-a30d-794507e5fe85">
 
-![6D2F8464-6D01-463C-B399-5840A8DE2674_1_102_o](https://github.com/pilahr/react-geolocation/assets/125895065/b6f5a46e-e797-4fba-baef-987b6cd9cf2b)
 
 
 
