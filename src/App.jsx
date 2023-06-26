@@ -9,7 +9,6 @@ const App = () => {
   const [weatherData, setWeatherData] = useState({});
   const [location, setLocation] = useState("bangkok");
 
-  console.log(process.env.REACT_APP_OLLIE);
 
   const geolocationAPI = navigator.geolocation;
 
