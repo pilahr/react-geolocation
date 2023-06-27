@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Login from "./pages/Login/Login";
 import Weather from "./pages/Weather/Weather";
+import Spinner from "./components/Spinner/Spinner"
 
 const App = () => {
   const [user, setUser] = useState();
@@ -57,6 +58,8 @@ const App = () => {
   useEffect(() => {
     getWeatherData(location);
   }, [location]);
+
+  if (!location) return <Spinner />;
 
   return (
     <>

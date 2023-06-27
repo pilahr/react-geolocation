@@ -1,6 +1,7 @@
 import React from "react";
 import "./WeatherCard.scss";
 import location from "../../assets/location.png";
+import Spinner from "../Spinner/Spinner";
 
 const WeatherCard = ({ weatherData }) => {
   let background = "weatherCard";
@@ -21,6 +22,8 @@ const WeatherCard = ({ weatherData }) => {
   }
 
   const forecast = weatherData.forecast.forecastday[0];
+
+  if (!weatherData) return <Spinner />;
 
   return (
     <>
