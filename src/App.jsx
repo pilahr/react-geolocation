@@ -8,7 +8,7 @@ import Spinner from "./components/Spinner/Spinner"
 const App = () => {
   const [user, setUser] = useState();
   const [weatherData, setWeatherData] = useState({});
-  const [location, setLocation] = useState("Bangkok");
+  const [location, setLocation] = useState("London");
 
   const geolocationAPI = navigator.geolocation;
 
@@ -27,7 +27,7 @@ const App = () => {
   };
 
   const error = () => {
-    setLocation("Paris");
+    setLocation("London");
   };
 
   const getWeatherData = async (location) => {
