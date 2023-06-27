@@ -7,7 +7,7 @@ import Weather from "./pages/Weather/Weather";
 const App = () => {
   const [user, setUser] = useState();
   const [weatherData, setWeatherData] = useState({});
-  const [location, setLocation] = useState("bangkok");
+  const [location, setLocation] = useState("Bangkok");
 
 
   const geolocationAPI = navigator.geolocation;
@@ -27,7 +27,7 @@ const App = () => {
   };
 
   const error = () => {
-    setLocation("London");
+    setLocation("Paris");
   };
 
   const getWeatherData = async (location) => {
