@@ -9,7 +9,6 @@ const App = () => {
   const [weatherData, setWeatherData] = useState({});
   const [location, setLocation] = useState("Bangkok");
 
-
   const geolocationAPI = navigator.geolocation;
 
   const getUserLocation = () => {
@@ -46,7 +45,6 @@ const App = () => {
 
       const data = await response.json();
       setWeatherData(data);
-      
     } catch (e) {
       alert(e.message);
     }

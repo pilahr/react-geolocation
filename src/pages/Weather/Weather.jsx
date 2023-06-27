@@ -9,7 +9,7 @@ import ForecastCardContainer from "../../container/ForecastCardContainer/Forecas
 import ForecastHourlyContainer from "../../container/ForecastHourlyContainer/ForecastHourlyContainer";
 import TodoListContainer from "../../container/TodoListContainer/TodoListContainer";
 
-const Weather = ({ weatherData, setLocation }) => {
+const Weather = ({ weatherData, setLocation, getUserLocation }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchInput = (event) => {
@@ -19,6 +19,7 @@ const Weather = ({ weatherData, setLocation }) => {
 
   const handleSubmit = () => {
     setLocation(searchTerm);
+    getUserLocation(searchTerm);
   };
 
   const forecast = weatherData.forecast.forecastday;
